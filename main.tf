@@ -14,7 +14,6 @@ module "subnets" {
   AZ       = var.AZ
   ngw      = try(each.value["ngw"], false)
   igw      = try(each.value["igw"], false)
-  route_tables = aws_route_table.route-tables
 }
 
 resource "aws_internet_gateway" "igw" {
